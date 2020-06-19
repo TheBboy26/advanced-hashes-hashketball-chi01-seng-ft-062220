@@ -130,7 +130,7 @@ def num_points_scored(player_name)
   game_hash.each do |location, team_data|
     team_data[:players].each do |player|
       if player[:player_name] == player_name
-        return player[:points]
+       return player[:points]
       end
     end
   end
@@ -140,7 +140,7 @@ def shoe_size(player_name)
   game_hash.each do |location, team_data|
     team_data[:players].each do |player|
       if player[:player_name] == player_name
-        return player[:shoe]
+       return player[:shoe]
       end
     end
   end
@@ -149,15 +149,15 @@ end
 def team_colors(team_name)
   game_hash.each do |location, team_data|
     if team_data[:team_name] == team_name
-      return team_data[:colors]
-    end
-  end
+     return team_data[:colors]
+      end
+ end
 end
 
 def team_names
   game_hash.map do |location, team_data|
     team_data[:team_name]
-  end
+ end
 end
 
 def player_numbers(team_name)
@@ -167,15 +167,15 @@ def player_numbers(team_name)
         player[:number]
       end
     end
-  end
+end
 end
 
 def player_stats(player_name)
   game_hash.each do |location, team_data|
     team_data[:players].each do |player_stats|
       if player_stats[:player_name] == player_name
-        return player_stats
-      end
+     return player_stats
+    end
     end
   end
 end
@@ -185,7 +185,7 @@ def big_shoe_rebounds
   game_hash.each do |location, team_data|
     team_data[:players].each do |player_stats|
       if player_stats[:shoe] > player[:shoe]
-        player = player_stats
+       player = player_stats
       end
     end
   end
